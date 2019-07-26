@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "相册",
+  "navigationBarBackgroundColor": "#00BADB",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "Icon": "../../components/icon/icon"
+  }
+}

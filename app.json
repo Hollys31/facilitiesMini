@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/facility/facility",
+    "pages/facility/info",
+    "pages/chart/chart",
+    "pages/album/album",
+    "pages/mine/mine",
+    "pages/address/address"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "裕丰小蜜蜂",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#494949",
+    "selectedColor": "#06caac",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "/resources/images/index1.png",
+        "iconPath": "/resources/images/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/resources/images/mine1.png",
+        "iconPath": "/resources/images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
+  "sitemapLocation": "sitemap.json"
+}

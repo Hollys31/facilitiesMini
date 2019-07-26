@@ -1,0 +1,69 @@
+<!--pages/chart/chart.wxml-->
+<view class='tab'>
+  <scroll-view scroll-x>
+    <text class='active'>湿度</text>
+    <text>温度</text>
+    <text>气压</text>
+    <text>光照</text>
+    <text>风速</text>
+    <text>雨量</text>
+  </scroll-view>
+</view>
+<view class='latest-data clearfix'>
+  <view class='item'>
+    <view class='tit'>最小值</view>
+    <view class='row'>
+      <Icon class="icon" iconClass="icon-air"></Icon>
+      空气
+      <text>12</text>
+    </view>
+    <view class='row'>
+      <Icon class="icon" iconClass="icon-soil"></Icon>
+      土壤
+      <text>12</text>
+    </view>
+  </view>
+  <view class='item'>
+    <view  class='tit'>平均值</view>
+    <view class='row'>
+     <Icon class="icon" iconClass="icon-air"></Icon>
+      空气
+      <text>12</text>
+    </view>
+    <view class='row'>
+      <Icon class="icon" iconClass="icon-soil"></Icon>
+      土壤
+      <text>12</text>
+    </view>
+  </view>
+  <view class='item'>
+    <view  class='tit'>最大值</view>
+    <view class='row'>
+      <Icon class="icon" iconClass="icon-air"></Icon>
+      空气
+      <text>12</text>
+    </view>
+    <view class='row'>
+      <Icon class="icon" iconClass="icon-soil"></Icon>
+      土壤
+      <text>12</text>
+    </view>
+  </view>
+</view>
+<view class='chart-wrap'>
+ 
+</view>
+<view class='other clearfix'>
+  <navigator hover-class='none' url='' class='item '>
+    <text class='fl label'>日照时长</text>
+    <text class='date fl'>2019/08/11</text>
+    222h
+    <Icon class="icon" iconClass="icon-more"></Icon>
+  </navigator> 
+  <navigator hover-class='none' url='' class='item'>
+    <text space="ensp" class='fl label'>年 积 温</text>
+    <text class='date fl'>2019/08/11</text>
+    222h
+    <Icon class="icon fr" iconClass="icon-more"></Icon>
+  </navigator> 
+</view>

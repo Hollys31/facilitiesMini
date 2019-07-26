@@ -1,0 +1,10 @@
+<!--pages/address/address.wxml-->
+<view class="map-wrap">
+  <map id="map" class="map" longitude="{{device.longitude}}" latitude="{{device.latitude}}" scale="10" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location enable-scroll="{{false}}">
+    <cover-view class="text">
+      <cover-view class="name">{{device.name}}</cover-view>
+      <cover-view>
+        <cover-image src="/resources/images/address.jpg"></cover-image>{{device.address}}</cover-view>
+    </cover-view>
+  </map>
+</view>

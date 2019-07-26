@@ -1,0 +1,8 @@
+/* components/pagination/pagination.wxss */
+.nomore{
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}

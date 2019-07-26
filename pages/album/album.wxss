@@ -1,0 +1,67 @@
+/* pages/album/album.wxss */
+
+.date {
+  font-size: 24rpx;
+  color: #fff;
+  padding: 0 20rpx;
+  background: #00badb;
+  white-space: nowrap;
+}
+
+.date .item {
+  width: 73rpx;
+  margin: 0 15rpx;
+  padding: 10rpx 0;
+  line-height: 1.8em;
+  text-align: center;
+  float: left;
+}
+
+.date .item.active {
+  background: #fff;
+  color: #00badb;
+  box-shadow: 0px 8rpx 12rpx 1px rgba(0, 186, 219, 0.15);
+  border-radius: 8rpx;
+}
+
+.date text {
+  font-size: 20rpx;
+  display: block;
+}
+
+.album {
+  margin: 10rpx 20rpx;
+}
+
+.album .item {
+  display: inline-block;
+  width: 100%;
+  height: 254rpx;
+  margin-top: 20rpx;
+  position: relative;
+  border-radius: 13rpx;
+  overflow: hidden;
+}
+
+.album .item image {
+  width: 710rpx;
+  height: 254rpx;
+}
+
+.album .item .text {
+  color: #fff;
+  position: absolute;
+  z-index: 9;
+  left: 20rpx;
+  bottom: 15rpx;
+}
+.nodata {
+  font-size: 24rpx;
+  color: #ccc;
+  text-align: center;
+}
+.nodata image{
+  width: 191rpx;
+  height: 219rpx;
+  margin: 200rpx auto 40rpx;
+}

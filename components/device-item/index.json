@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Power": "../../components/power/power",
+    "Icon": "../../components/icon/icon"
+  }
+}

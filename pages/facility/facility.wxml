@@ -1,0 +1,116 @@
+<!--pages/facility/facility.wxml-->
+<navigator hover-class='none' url='/pages/facility/info?type=YF1' class='f-name clearfix'>
+  <image class='img fl' src='/resources/images/bee.png'></image>
+  <view class='text fl'>
+    {{device.NAME}}
+    <view class='state' wx:if="{{status==0}}">离线</view>
+    <view class='state' wx:if="{{status==1}}">
+      <Icon class="icon1" iconClass="icon-singal"></Icon> {{device.operator}}
+      <Power num="{{device.battery}}" class="power" Color="#ccc"></Power> {{device.battery}}%</view>
+  </view>
+  <view class='state' wx:if="{{status==2}}">离线</view>
+  <Icon class="icon fr" iconClass="icon-more"></Icon>
+</navigator>
+<view class="facility  clearfix {{status==1?'active':''}}">
+  <view class='item item1'>
+    <Icon class="icon" iconClass="icon-humid"></Icon>
+    <view class='data'>
+      <view>空气湿度
+        <text>{{device.humidity||'-'}}%</text>
+      </view>
+      <view>空气状态
+        <text>干燥</text>
+      </view>
+    </view>
+  </view>
+  <view class='item item2'>
+    <Icon class="icon" iconClass="icon-temp"></Icon>
+    <view class='data'>
+      <view>空气温度
+        <text>{{device.temperature}}°C</text>
+      </view>
+      <view>空气状态
+        <text>两双</text>
+      </view>
+    </view>
+  </view>
+  <view class='item item3'>
+    <Icon class="icon" iconClass="icon-sun"></Icon>
+    <view class='data'>
+      <view>光照
+        <text>{{device.illumination}}Lux</text>
+      </view>
+      <view>光照强度
+        <text>强</text>
+      </view>
+    </view>
+  </view>
+  <view class='item item4'>
+    <Icon class="icon" iconClass="icon-pa"></Icon>
+    <view class='data'>
+      <view>气压
+        <text>{{device.pressure}}Pa</text>
+      </view>
+      <view>气压强度
+        <text>大</text>
+      </view>
+    </view>
+  </view>
+  <view class='item item5'>
+    <Icon class="icon" iconClass="icon-soilHumid"></Icon>
+    <view class='data'>
+      <view>土壤湿度
+        <text>{{device.soilHumidity}}%</text>
+      </view>
+      <view>土壤状态
+        <text>干燥</text>
+      </view>
+    </view>
+  </view>
+  <view class='item item6'>
+    <Icon class="icon" iconClass="icon-water"></Icon>
+    <view class='data'>
+      <view>土壤含水量
+        <text>{{device.soilEc}}%</text>
+      </view>
+      <view>水量状态
+        <text>潮湿</text>
+      </view>
+    </view>
+  </view>
+  <view class='item item7'>
+    <Icon class="icon" iconClass="icon-wind"></Icon>
+    <view class='data'>
+      <view>风速
+        <text>{{device.windSpeed}}m/s</text>
+      </view>
+      <view>风向
+        <text>{{device.windDirection}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='item item8'>
+    <Icon class="icon" iconClass="icon-rain"></Icon>
+    <view class='data'>
+      <view>降雨量
+        <text>{{device.rainfall}}mm</text>
+      </view>
+      <view>雨量状态
+        <text>潮湿</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='facilityinfo'>
+  <view class='item'>
+    <text decode="{{true}}"> 编&emsp;&emsp;号</text> 11111
+  </view>
+  <view class='item'>
+    <text decode="{{true}}"> 型&emsp;&emsp;号</text> {{device.type}}
+  </view>
+  <view class='item'>
+    <text decode="{{true}}"> 软件版本</text> {{device.softwareVersion}}
+  </view>
+</view>
+<view class='delete' bindtap="deleteDevice">删除设备</view>

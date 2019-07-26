@@ -1,0 +1,45 @@
+/* pages/facility/info.wxss */
+
+.item {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  padding: 0 30rpx;
+}
+
+.item .more {
+  color: #ccc;
+}
+.yfm1 .item .mainColor{
+  margin-right: 8rpx;
+}
+.yfm2 {
+  width: 710rpx;
+  display: inline-block;
+  background: #fff;
+  margin:20rpx;
+  box-shadow: 0px 8rpx 12rpx 1px rgba(204, 204, 204, 0.15);
+  border-radius: 13rpx;
+  overflow: hidden;
+}
+.yfm2 .item{
+  color: #ccc;
+  text-align: right;
+}
+.yfm2 .item text{
+  color: #000;
+  float: left;
+}
+.delete{
+width:500rpx;
+height:85rpx;
+line-height: 85rpx;
+font-size: 30rpx;
+color: #fff;
+text-align: center;
+background:#00BADB;
+border-radius:43rpx;
+margin:300rpx auto 0;
+}

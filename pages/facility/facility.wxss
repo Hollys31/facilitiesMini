@@ -1,0 +1,200 @@
+/* pages/facility/facility.wxss */
+
+.f-name {
+  height: 150rpx;
+  padding: 20rpx 30rpx;
+  background: #fff;
+  box-shadow: 0px 15rpx 17rpx 3rpx rgba(204, 204, 204, 0.15);
+  border-radius: 0px 0px 30rpx 35rpx;
+}
+
+.f-name .img {
+  width: 93rpx;
+  height: 93rpx;
+  border: 1px solid #f5f5f5;
+  background: #f5f5f5;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.f-name .text {
+  width: 460rpx;
+  margin: 15rpx 0 0 15rpx;
+}
+
+.f-name .state {
+  color: #ccc;
+  font-size: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.f-name .state .power{
+  margin-left: 15rpx;
+}
+.f-name  .icon {
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  color: #ccc;
+}
+
+.f-name  .icon1 {
+  font-size: 28rpx;
+  color: #ccc;
+}
+
+.facility {
+  padding: 23rpx 0;
+}
+
+.facility .item {
+  width: 335rpx;
+  height: 202rpx;
+  background: #fff;
+  box-shadow: 0px 8rpx 12rpx 1px rgba(204, 204, 204, 0.15);
+  border-radius: 13px;
+  padding: 20rpx;
+  margin: 20rpx;
+  float: left;
+}
+
+.facility .item .icon {
+  width: 68rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  padding-top: 18rpx;
+  margin-top: 50rpx;
+  float: left;
+  background: rgba(74, 74, 74, 0.2);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.facility .item .data {
+  width: 200rpx;
+  margin-left: 25rpx;
+  line-height: 70rpx;
+  float: left;
+}
+facility .item .data view{
+  white-space: nowrap;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.facility .item .data text {
+  float: right;
+}
+
+.facility.active  .item1 .icon {
+  color: #52dabf;
+  background: rgba(82, 218, 191, 0.2);
+}
+
+.facility.active  .item1 .data text {
+  color: #52dabf;
+}
+
+.facility.active  .item2  .icon {
+  color: #86e06d;
+  background: rgba(134, 224, 109, 0.2);
+}
+
+.facility.active  .item2 .data text {
+  color: #86e06d;
+}
+
+.facility.active .item3   .icon {
+  color: #f7d85f;
+  background: rgba(247, 216, 95, 0.2);
+}
+
+.facility.active  .item3 .data text {
+  color: #f7d85f;
+}
+
+.facility.active .item4 .icon {
+  color: #3ca7fc;
+  background: rgba(60, 167, 252, 0.2);
+}
+
+.facility.active  .item4 .data text {
+  color: #3ca7fc;
+}
+
+.facility.active .item5 .icon {
+  color: #b57f3f;
+  background: rgba(181, 127, 63, 0.2);
+}
+
+.facility.active  .item5 .data text {
+  color: #b57f3f;
+}
+
+.facility.active .item6 .icon {
+  color: #6fc2e6;
+  background: rgba(111, 194, 230, 0.2);
+}
+
+.facility.active  .item6 .data text {
+  color: #6fc2e6;
+}
+
+.facility.active .item7 .icon {
+  color: #7575ac;
+  background: rgba(117, 117, 172, 0.2);
+}
+
+.facility.active  .item7 .data text {
+  color: #7575ac;
+}
+
+.facility.active .item8 .icon {
+  color: #e87070;
+  background: rgba(232, 112, 112, 0.2);
+}
+
+.facility.active  .item8 .data text {
+  color: #e87070;
+}
+
+.facilityinfo {
+  width: 710rpx;
+  height: 273rpx;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 8rpx 12rpx 1px rgba(204, 204, 204, 0.15);
+  border-radius: 13rpx;
+}
+
+.facilityinfo .item {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+  color: #999;
+  padding: 0 50rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.facilityinfo .item:last-child {
+  border: none;
+}
+
+.facilityinfo .item>text {
+  position: absolute;
+  left: 50rpx;
+  color: #000;
+}
+
+.delete {
+  width: 500rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  background: #00badb;
+  border-radius: 43rpx;
+  margin: 40rpx auto;
+}

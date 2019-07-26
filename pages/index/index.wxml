@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class='banner'>
+  <view class='search'>
+    <input placeholder-class="placeholder" value='{{name}}' placeholder='输入设备名称/设备ID' bindfocus='searchFocus' bindblur='searchBlur' bindconfirm="searchDevice"/>
+    <Icon class="icon"  bindtap="searchDevice" iconClass="icon-search"></Icon>
+  </view>
+  <image src='/resources/images/banner.png'></image>
+</view>
+<view class='devices'>
+  <Pagination name="device"  bind:getList="getHomeList" list="{{deviceList}}" generic:selectable="device-item" total="{{page.totalCounts}}"></Pagination>
+</view>
+<Tabbar></Tabbar>

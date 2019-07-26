@@ -1,0 +1,127 @@
+/* components/device-item/index.wxss */
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  width: 0;
+  height: 0;
+  display: block;
+  content: "";
+  clear: both;
+  visibility: none;
+}
+ .item {
+  background: #fff;
+  margin-bottom: 20rpx;
+  box-shadow: 0px 8rpx 12rpx 1rpx rgba(204, 204, 204, 0.15);
+  border-radius: 10rpx;
+}
+
+.item .title {
+  height: 74rpx;
+  line-height: 74rpx;
+  color: #999;
+  font-size: 28rpx;
+  padding: 0 35rpx;
+  display: block;
+}
+.FM1 .title{
+  border-bottom: 1rpx solid #eee;
+}
+ .item .title .fl {
+  margin-right: 15rpx;
+}
+
+ .item .icon {
+  font-size: 26rpx;
+  margin-right: 10rpx;
+}
+ .item .state{
+  height: 40rpx;
+  line-height: 55rpx;
+  padding: 0 35rpx;
+  color: #ccc;
+  font-size: 14rpx;
+  display: inline-block;
+}
+ .state .powers{
+  margin-left: 20rpx;
+}
+ .state .icons{
+  color: #00badb;
+  font-size: 22rpx;
+}
+ .item.FM2 .img {
+  height: 311rpx;
+}
+
+.data-wrap .img {
+  width: 236rpx;
+  height: 262rpx;
+}
+
+.data-wrap .datas {
+  width: 473rpx;
+  padding-top: 25rpx;
+}
+
+.data-wrap .datas .data {
+  width: 50%;
+  float: left;
+  color: #4a4a4a;
+  margin-bottom: 40rpx;
+}
+
+.data-wrap  .data .icon {
+  width: 46rpx;
+  height: 38rpx;
+  padding-top: 8rpx;
+  margin-top: 15rpx;
+  background: rgba(74, 74, 74, 0.2);
+  border-radius: 50%;
+  text-align: center;
+}
+.data-wrap  .data .text{
+  width: 130rpx;
+  text-align: center;
+}
+.data-wrap .text text{
+  display: block;
+}
+.item.active .datas .data1{
+  color: #52dabf;
+}
+
+.item.active  .data1 .icon {
+  background: rgba(82,218,191, 0.2);
+}
+.item.active .datas .data2{
+  color: #86E06D;
+}
+
+.item.active  .data2 .icon {
+  background: rgba(134,224,109, 0.2);
+}
+.item.active .datas .data3{
+  color: #F7D85F
+}
+
+.item.active  .data3 .icon {
+  background: rgba(247,216,95, 0.2);
+}
+.item.active .datas .data4{
+  color: #3CA7FC
+}
+
+.item.active  .data4 .icon {
+  background: rgba(60,167,252, 0.2);
+}

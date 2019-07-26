@@ -1,0 +1,125 @@
+/* pages/chart/chart.wxss */
+
+.tab {
+  width: 100%;
+  height: 85rpx;
+  line-height: 85rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fff;
+  color: #4a4a4a;
+}
+
+.tab text {
+  display: inline-block;
+  padding: 4rpx 36rpx;
+}
+
+.tab text.active {
+  color: #00badb;
+  position: relative;
+}
+
+.tab text.active::after {
+  width: 25rpx;
+  height: 6rpx;
+  content: "";
+  position: absolute;
+  z-index: 9;
+  left: 50rpx;
+  bottom: 9rpx;
+  background: #00badb;
+  border-radius: 3rpx;
+}
+
+.latest-data, .chart, .other {
+  width: 710rpx;
+  margin: 20rpx auto;
+  background: #fff;
+  box-shadow: 0px 8rpx 12rpx 1px rgba(204, 204, 204, 0.15);
+  border-radius: 10rpx;
+}
+
+.latest-data {
+  padding: 10rpx 0;
+}
+
+.latest-data .item {
+  width: 236rpx;
+  font-size: 24rpx;
+  color: #4a4a4a;
+  text-align: center;
+  line-height: 1.8em;
+  float: left;
+}
+
+.latest-data .item .tit {
+  font-size: 28rpx;
+  color: #000;
+  line-height: 2em;
+}
+
+.latest-data .item text {
+  margin-left: 5rpx;
+}
+
+.other .item {
+  height: 90rpx;
+  line-height: 90rpx;
+  overflow: hidden;
+  color: #999;
+  font-size: 24rpx;
+  text-align: right;
+  padding: 0 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.other .item .date {
+  font-size: 20rpx;
+  line-height: 100rpx;
+}
+
+.other .item .label {
+  font-size: 28rpx;
+  color: #000;
+  margin-right: 8rpx;
+}
+
+/* .chart {
+  width: 710rpx;
+  height: 756rpx;
+  background: #fff;
+  box-shadow: 0px 8rpx 12rpx 1px rgba(204, 204, 204, 0.15);
+  border-radius: 10rpx;
+} */
+
+.chart-wrap {
+  width: 710rpx;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20rpx;
+  position: relative;
+  margin: 0 auto;
+}
+
+.chart-wrap .chart {
+  width: 710rpx;
+  height: 500rpx;
+}
+
+.chart-wrap .tips {
+  height: 1em;
+  line-height: 1.6em;
+}
+
+.chart-wrap canvas {
+  width: 710rpx;
+  height: 460rpx;
+  margin: 0 auto;
+  padding: 20rpx 0;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "设备信息",
+  "usingComponents": {
+    "Icon": "../../components/icon/icon",
+    "Power": "../../components/power/power"
+  }
+}

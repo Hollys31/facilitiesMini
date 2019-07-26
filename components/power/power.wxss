@@ -1,0 +1,16 @@
+/* components/power/power.wxss */
+.power{
+  width: 24rpx;
+  height: 15rpx;
+  padding: 2rpx;
+  border: solid 1rpx #00badb;
+  border-radius: 6rpx;
+  display: inline-block;
+  overflow: hidden；
+}
+.power-inner{
+  background: #00badb;
+  height: 6rpx;
+  border-radius: 3rpx;
+  margin-left: 1rpx;
+}

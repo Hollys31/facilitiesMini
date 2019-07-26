@@ -1,0 +1,4 @@
+<!--components/power/power.wxml-->
+<view class='power' style="border-color:{{Color}}">
+  <view class='power-inner' style="width:{{num}}%;background:{{Color}}"></view>
+</view>

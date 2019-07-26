@@ -1,0 +1,39 @@
+<!--pages/facility/info.wxml-->
+<!-- YF1设备 -->
+<view class='yfm1' wx:if="{{type=='YF1'}}">
+  <navigator hover-class='none' url="/pages/chart/chart" class='item clearfix'>
+    <Icon class="icon mainColor" iconClass="icon-chart"></Icon>
+    <text space="emsp">图  表</text>
+    <Icon class="icon more fr" iconClass="icon-more"></Icon>
+  </navigator>
+  <navigator hover-class='none' url='/pages/address/address?type=YF1' class='item clearfix'>
+    <Icon class="icon mainColor" iconClass="icon-address"></Icon>
+    <text>位置信息</text>
+    <Icon class="icon more fr" iconClass="icon-more"></Icon>
+  </navigator>
+</view>
+<!-- YF2设备 -->
+<block wx:if="{{type=='YF2'}}">
+  <view class='yfm2'>
+    <navigator hover-class='none' url='/pages/album/album?id=' class=' item clearfix'>
+      <text space="emsp">相  册</text>
+      <Icon class="icon fr more" iconClass="icon-more"></Icon>
+    </navigator>
+    <navigator hover-class='none' url="/pages/address/address?type=YF2" class=' item clearfix'>
+      <text>位置信息</text>
+      <Icon class="icon fr more" iconClass="icon-more"></Icon>
+    </navigator>
+  </view>
+  <view class='yfm2'>
+    <view class='item'>
+      <text space="emsp">编  号</text> 11111
+    </view>
+    <view class='item'>
+      <text space="emsp">型  号</text> {{device.type}}
+    </view>
+    <view class='item'>
+      <text decode='{{true}}'>软件版本</text> {{device.softwareVersion}}
+    </view>
+  </view>
+  <view class='delete' bindtap="deleteDevice">删除设备</view>
+</block>

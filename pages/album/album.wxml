@@ -1,0 +1,18 @@
+<!--pages/album/album.wxml-->
+<view class='date clearfix'>
+  <view class="item {{currDayInd==index?'active':''}}" bindtap="changeDays" wx:for="{{days}}" wx:key="index" data-val="{{item.day}}" data-index="{{index}}"> 
+    {{item.week}} <text>{{item.showday}}</text>
+  </view>
+</view>
+<view class='album'>
+ <block wx:if="{{photos.length>0}}">
+  <view class='item' wx:for="{{ photos}}" wx:key="index">
+    <image src="{{item.imageUrl}}"></image>
+    <view class='text'><Icon class="icon" iconClass="icon-clock"></Icon> {{item.collectTime}}</view>
+  </view>
+ </block>
+ <view class="nodata" wx:if="{{photos.length===0}}">
+  <image src="/resources/images/noimg.png"></image>
+  <text>暂无图像</text>
+ </view>
+</view>

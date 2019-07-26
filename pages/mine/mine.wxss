@@ -1,0 +1,132 @@
+/* pages/mine/mine.wxss */
+
+page {
+  background: #fff;
+}
+
+.user {
+  width: 710rpx;
+  height: 263rpx;
+  padding: 50rpx;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 8rpx 12rpx 1px rgba(204, 204, 204, 0.3);
+  border-radius: 10rpx;
+}
+
+.user .name {
+  width: 480rpx;
+  line-height: 3.4em;
+  float: left;
+}
+
+.user .name .edit {
+  color: #ccc;
+  font-size: 24rpx;
+  line-height: 1.5em;
+  display: block;
+}
+
+.user image {
+  float: left;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+
+.other {
+  margin-top: 20rpx;
+}
+
+.other .item {
+  height: 115rpx;
+  line-height: 115rpx;
+  font-size: 28rpx;
+  padding: 0 35rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.other .item .icon {
+  width: 62rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  margin-right: 10rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.other .item .icon.fr {
+  color: #ccc;
+  margin-top: 29rpx;
+}
+
+.other .item .icon.us {
+  background: linear-gradient(90deg, rgba(250, 204, 80, 1) 0%, rgba(249, 180, 10, 1) 100%);
+}
+
+.other .item .icon.wiki {
+  background: linear-gradient(90deg, rgba(119, 191, 242, 1) 0%, rgba(61, 138, 218, 1) 100%);
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  range: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-inner {
+  width: 560rpx;
+  height: 360rpx;
+  line-height: 276rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #000;
+  background: #fff;
+  border-radius: 10rpx;
+  position: fixed;
+  z-index: 9998;
+  left: 50%;
+  top: 50%;
+  margin-left: -280rpx;
+  margin-top: -180rpx;
+  overflow: hidden;
+}
+
+.modal .call-img {
+  width: 132rpx;
+  height: 130rpx;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  margin-left: -66rpx;
+  margin-top: -240rpx;
+}
+
+.modal .charge>view {
+  width: 50%;
+  height: 85rpx;
+  font-size: 28rpx;
+  color: #00badb;
+  line-height: 85rpx;
+  float: left;
+}
+
+.modal .charge .call {
+  color: #fff;
+  background: #00badb;
+}
+.modal .close{
+  color: #ccc;
+  font-size: 24rpx;
+  right: 20rpx;
+  top: -110rpx;
+   position: absolute;
+}
