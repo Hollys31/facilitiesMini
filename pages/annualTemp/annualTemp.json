@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "年积温",
+  "usingComponents": {
+    "ff-canvas": "../../f2-canvas/f2-canvas"
+  }
+}

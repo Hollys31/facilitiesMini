@@ -28,9 +28,11 @@
   height: 40rpx;
   line-height: 40rpx;
 }
-.f-name .state .power{
+
+.f-name .state .power {
   margin-left: 15rpx;
 }
+
 .f-name  .icon {
   font-size: 30rpx;
   margin-top: 30rpx;
@@ -73,15 +75,19 @@
   width: 200rpx;
   margin-left: 25rpx;
   line-height: 70rpx;
+  padding-top: 15rpx;
   float: left;
 }
-facility .item .data view{
+
+.facility .item .data view {
   white-space: nowrap;
   height: 70rpx;
   line-height: 70rpx;
+  text-align: right;
 }
+
 .facility .item .data text {
-  float: right;
+  float: left;
 }
 
 .facility.active  .item1 .icon {

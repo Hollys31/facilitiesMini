@@ -1,0 +1,25 @@
+<!--pages/sunshine/sunshine.wxml-->
+<view class='tab'>
+  <scroll-view scroll-x>
+    <text wx:for="{{tabDate}}" wx:key="{{index}}" data-indx="{{index}}" data-val="{{item}}" class="{{currSortInd==index?'active':''}}" bindtap="changeTabSort">{{item}}</text>
+  </scroll-view>
+</view>
+<view class='chart-wrap' wx:if="{{hasChartData}}">
+  <ff-canvas  class='chart' canvas-id="chart" id="chart" opts="{{opts}}"></ff-canvas>
+</view>
+ <view wx:if="{{!hasChartData}}" class="empty">
+  <image src="/resources/images/nochart.png"></image>
+  <text>暂无数据</text>
+  </view>
+<view class='other clearfix'>
+  <navigator hover-class='none' url='' class='item '>
+    <text space="ensp" class='fl label'>日    期</text>
+   {{currMonth}}
+    <Icon class="icon" iconClass="icon-more"></Icon>
+  </navigator>
+  <navigator hover-class='none' url='' class='item'>
+    <text  class='fl label'>光照时长</text>
+ {{totalSunTime.totalData||0}}h
+    <Icon class="icon fr" iconClass="icon-more"></Icon>
+  </navigator>
+</view>

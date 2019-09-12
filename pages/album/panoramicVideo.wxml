@@ -1,0 +1,2 @@
+<!--pages/album/panoramicVideo.wxml-->
+<web-view src="https://device.yufengtek.com/equipment/krpano/index.html/panovideo/index.html"></web-view>

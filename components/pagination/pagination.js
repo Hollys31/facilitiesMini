@@ -23,6 +23,10 @@ Component({
       type: Number,
       value: 3
     },
+    ondata:{
+      type:Boolean,
+      value:false
+    },
     total: Number,/* 列表条数 */
     list: {
       type: Array,
@@ -36,13 +40,12 @@ Component({
   data: {
     initState: false, // 是否已经加载过
     loading: false,
-    ended: false
+    ended: false,
+    
   },
   lifetimes: {
     attached: function () {
-      if (this.data.initImmediately) {
-        this.initData()
-      }
+     
     }
   },
   /**

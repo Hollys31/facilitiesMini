@@ -6,6 +6,6 @@
    <text style="color:{{item.selected?tabBar.selectedColor:tabBar.color}}"> {{item.text}}</text>
   </navigator> 
  </view>
- <image class='scan' src='/resources/images/add.png'></image>
+ <image bindtap="addEquiement" class='scan' src='/resources/images/add.png'></image>
 </view>
 

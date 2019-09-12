@@ -7,7 +7,7 @@ const HTTP=amount=>{
       },
       ...amount,
       success: function (res) {
-        if (res.data.status == 200) {
+        if (res.data.status == 200 || res.data.status==999064) {
           resolve(res.data);
         }
       },
@@ -20,7 +20,7 @@ const HTTP=amount=>{
         reject();
       },
       complete: function () {
-
+        wx.hideLoading();
       }
     })
   })

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    callModal:false
+    callModal:false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   /**
@@ -25,11 +26,6 @@ Page({
     this.setData({
       callModal:true
     })
-  },
-  handelCloseModal(){//关闭模态框
-  this.setData({
-    callModal:false
-  })
   },
   makephoneCall(){//联系客服
     wx.makePhoneCall({

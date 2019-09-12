@@ -1,0 +1,45 @@
+/* components/myselect/myselect.wxss */
+ .select {
+  width: 158rpx;
+  height: 46rpx;
+  background: #00BADB;
+  border-radius: 14rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  color: #fff;
+  text-align: center;
+  z-index: 9999;
+  overflow: hidden;
+   transition: all .2s linear;
+}
+ .select.active{
+  height: 276rpx;
+ }
+ .select .img{
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  margin-left: 8rpx;
+  transition: all .2s linear;
+ }
+  .select.active .img{ 
+    transform: rotate(180deg) translateY(-10rpx);
+  }
+.select .selected{
+  font-size: 28rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  border-radius: 14rpx;
+  border: 1rpx solid #28d0ee;
+  border-top: 0;
+}
+.select .item{
+  height: 46rpx;
+  line-height: 46rpx;
+  border-bottom: 1rpx solid #28d0ee;
+  font-size: 26rpx;
+}
+.select .item:last-child{
+  border-bottom: 0;
+}

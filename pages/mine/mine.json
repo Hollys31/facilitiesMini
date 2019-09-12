@@ -2,6 +2,7 @@
   "navigationBarTitleText": "我的",
   "usingComponents": {
     "Icon": "../../components/icon/icon",
-    "Tabbar": "../../components/tabbar/tabbar"
+    "Tabbar": "../../components/tabbar/tabbar",
+    "Modal":"../../components/invalide/invalide"
   }
 }

@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "图表",
   "usingComponents": {
-    "Icon": "../../components/icon/icon"
+    "ff-canvas": "../../f2-canvas/f2-canvas",
+    "Icon": "../../components/icon/icon",
+    "my-select": "../../components/myselect/myselect"
   }
 }

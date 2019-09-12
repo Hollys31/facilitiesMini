@@ -22,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
-	"appid": "wxde5b778ba7ebd6b1",
+	"appid": "wxa25ddaa5451e6d4b",
 	"projectname": "facilitiesMini",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -89,6 +89,49 @@
 					"id": -1,
 					"name": "地址",
 					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "日照时长",
+					"pathName": "pages/sunshine/sunshine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "年积温",
+					"pathName": "pages/annualTemp/annualTemp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "文章",
+					"pathName": "pages/wiki/article",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "小百科",
+					"pathName": "pages/wiki/wiki",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "全景图",
+					"pathName": "pages/album/panorama",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "全景视频",
+					"pathName": "pages/album/panoramicVideo",
+					"query": "",
 					"scene": null
 				}
 			]

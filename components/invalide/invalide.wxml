@@ -1,0 +1,14 @@
+<!--components/invalide/invalide.wxml-->
+<view class='modal' wx:if="{{callModal}}" catchtouchmove="catchModal">
+  <!-- <image class='call-img' src='/resources/images/contact.png'></image> -->
+  <slot name="img"></slot>
+  <view class='modal-inner'>
+  <Icon class="icon close" iconClass="icon-close" bindtap="handelCloseModal"></Icon>
+   <!--  是否拨打客服热线？ -->
+   <slot name="context"></slot>
+    <view class='charge clearfix'>
+      <view class='cancel' bindtap="handelCloseModal">取消</view>
+      <view class='call' bindtap='makephoneCall'>{{btnTxt}}</view>
+    </view>
+  </view>
+</view>

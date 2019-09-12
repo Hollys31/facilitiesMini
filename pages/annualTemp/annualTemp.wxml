@@ -1,0 +1,20 @@
+<!--pages/annualTemp/annualTemp.wxml-->
+<view class='chart-wrap' wx:if="{{hasChartData}}">
+  <ff-canvas  class='chart' canvas-id="chart" id="chart"></ff-canvas>
+</view>
+ <view wx:if="{{!hasChartData}}" class="empty">
+  <image src="/resources/images/nochart.png"></image>
+  <text>暂无数据</text>
+  </view>
+<view class='other clearfix'>
+  <view class='item '>
+    <text space="ensp" class='fl label'>日  期</text>
+   {{temp.currDate||'YY-MM'}}
+    <Icon class="icon" iconClass="icon-more"></Icon>
+  </view>
+  <view class='item'>
+    <text  class='fl label'>年积温</text>
+ {{temp.currVal||0}}h
+    <Icon class="icon fr" iconClass="icon-more"></Icon>
+  </view>
+</view>

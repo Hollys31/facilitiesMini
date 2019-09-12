@@ -42,24 +42,27 @@
 
 .latest-data {
   padding: 10rpx 0;
+  transition:all .3s linear;
 }
 
-.latest-data .item {
+.latest-data .row {
   width: 236rpx;
+  padding-left: 20rpx;
   font-size: 24rpx;
   color: #4a4a4a;
-  text-align: center;
   line-height: 1.8em;
   float: left;
 }
 
-.latest-data .item .tit {
+.latest-data .row.tit {
+  padding-left: 0;
+  text-align: center;
   font-size: 28rpx;
   color: #000;
   line-height: 2em;
 }
 
-.latest-data .item text {
+.latest-data .row text {
   margin-left: 5rpx;
 }
 
@@ -85,17 +88,9 @@
   margin-right: 8rpx;
 }
 
-/* .chart {
-  width: 710rpx;
-  height: 756rpx;
-  background: #fff;
-  box-shadow: 0px 8rpx 12rpx 1px rgba(204, 204, 204, 0.15);
-  border-radius: 10rpx;
-} */
-
 .chart-wrap {
   width: 710rpx;
-  height: 500rpx;
+  height: 700rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,9 +102,10 @@
   margin: 0 auto;
 }
 
+
 .chart-wrap .chart {
   width: 710rpx;
-  height: 500rpx;
+  height: 700rpx;
 }
 
 .chart-wrap .tips {
@@ -119,7 +115,28 @@
 
 .chart-wrap canvas {
   width: 710rpx;
-  height: 460rpx;
+  height: 660rpx;
   margin: 0 auto;
   padding: 20rpx 0;
+}
+
+.empty {
+  width: 710rpx;
+  margin:40rpx auto 0;
+  position: relative;
+  text-align: center;
+  padding-bottom: 185rpx;
+  padding-top: 178rpx;
+  
+}
+
+.empty image {
+  width: 170rpx;
+  height: 263rpx;
+  margin: 0 auto 23rpx;
+}
+
+.empty text {
+  color: #ccc;
+  font-size: 24rpx;
 }

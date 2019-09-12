@@ -3,6 +3,15 @@
   height: 40rpx;
   line-height: 40rpx;
   text-align: center;
-  font-size: 24rpx;
-  color: #999;
+  font-size: 22rpx;
+  color: #ccc;
+}
+.nodata{
+  color: #ccc;
+  text-align: center;
+}
+.nodata image{
+  width: 192rpx;
+  height: 202rpx;
+  margin: 200rpx auto 30rpx;
 }

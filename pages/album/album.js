@@ -13,7 +13,8 @@ Page({
     photos: [],//相册列表
     currentPage: 1,
     currDay: formatTime(new Date()),
-    currDayInd: 6
+    currDayInd: 6,
+    total:0,
   },
 
   /**
@@ -50,8 +51,17 @@ Page({
         photoList = photoList.concat(res.data.photos);
       }
       _this.setData({
-        photos: photoList
+        photos: photoList,
+        total: res.data.page.totalCounts
       })
+    })
+  },
+  getpanoVideo(day){
+    API.panoVideo({
+      time: day,
+      devId: app.globalData.devId,
+    }).then(res=>{
+      console.log(res);
     })
   },
   changeDays(e) {//切换日期
@@ -64,6 +74,10 @@ Page({
       photos:[]
     })
     this.getPhotoList(day);
+    this.getpanoVideo(day);
+  },
+  playVideo(){
+    
   },
   /**
    * 生命周期函数--监听页面显示

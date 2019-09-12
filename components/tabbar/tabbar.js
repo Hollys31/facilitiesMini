@@ -1,5 +1,7 @@
 // components/tabbar/tabbar.js
 const app = getApp();
+const API = require('../../utils/api.js')
+const device = require('../../model/device.js')
 Component({
   /**
    * 组件的属性列表
@@ -62,6 +64,9 @@ Component({
       this.setData({
         tabBar: tabBar
       })
+    },
+    addEquiement() {//添加设备
+      device.addEquiement();
     },
   }
 })

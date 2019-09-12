@@ -1,0 +1,41 @@
+/* pages/wiki/wiki.wxss */
+page{
+  background: #fff;
+}
+.item{
+  height: 220rpx;
+  margin: 40rpx 30rpx;
+  border-bottom: 1px solid #f9f9f9;
+  line-height: 1.5em;
+  position: relative;
+}
+.item .left{
+  width: 465rpx;
+}
+.item .tit{
+  margin-top: 15rpx;
+  font-size: 28rpx;
+  color:#333;
+  line-height: 3em;
+}
+.item .brief{
+  color: #444;
+  font-size: 22rpx;
+}
+.item image{
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 5rpx;
+  z-index: 99;
+}
+.nodate{
+  text-align: center;
+  color: #ccc;
+}
+.nodate image{
+  width: 170rpx;
+  height: 263rpx;
+  margin: 200rpx auto 10rpx;
+}

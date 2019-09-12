@@ -2,9 +2,9 @@
   "navigationBarTitleText": "裕丰小蜜蜂",
   "usingComponents": {
     "Icon": "../../components/icon/icon",
-    
     "Tabbar": "../../components/tabbar/tabbar",
     "Pagination":"../../components/pagination/pagination",
-    "device-item": "/components/device-item/index"
+    "device-item": "/components/device-item/index",
+    "Modal": "../../components/invalide/invalide"
   }
 }

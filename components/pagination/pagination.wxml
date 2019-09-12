@@ -4,9 +4,9 @@
   <selectable item="{{item}}"></selectable>
 </block>
 <view class="nomore" wx:if="{{loading}}" >加载中...</view>
-<view class="nomore" wx:if="{{ended||list.length<size-1}}">没有更多数据</view>
+<view class="nomore" wx:if="{{list.length===total}}">———— 没有更多数据 ————</view>
 </block>
-
-<block wx:if="{{list.length==0}}">
-  暂无数据
-</block>
+<view class="nodata" wx:if="{{ondata&&list.length==0}}">
+  <image  src="/resources/images/nodevice.png"></image>
+  <text>暂无设备</text>
+</view>

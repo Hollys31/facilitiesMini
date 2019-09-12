@@ -1,9 +1,14 @@
 <!--pages/mine/mine.wxml-->
 <view class='user clearfix'>
-  <view class='name'>欧阳小小
+  <view class='name'>
+    <open-data type="userNickName"></open-data>
     <text class='edit'>编辑个人信息</text>
   </view>
-  <image src='/resources/images/headerImg.png'></image>
+  <view class="headerImg">
+    <button wx:if="{{!canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    <open-data wx:if="{{canIUse}}" type="userAvatarUrl"></open-data>
+  </view>
+  <!--   <image wx:if="{{!canIUse}}" src='/resources/images/headerImg.png'></image> -->
 </view>
 <view class='other'>
   <view class='item' bindtap='handelContact'>
@@ -11,21 +16,14 @@
     联系客服
     <Icon class="icon fr" iconClass="icon-more"></Icon>
   </view>
-  <navigator hover-class='none' url='' class='item'>
+  <navigator hover-class='none' url='/pages/wiki/wiki' class='item'>
     <Icon class="wiki icon" iconClass="icon-wiki"></Icon>
     小百科
     <Icon class="icon fr" iconClass="icon-more"></Icon>
   </navigator>
 </view>
-<view wx:if="{{callModal}}" class='modal'>
-  <image class='call-img' src='/resources/images/contact.png'></image>
-  <view class='modal-inner'>
-  <Icon class="icon close" iconClass="icon-close" bindtap="handelCloseModal"></Icon>
-    是否拨打客服热线？
-    <view class='charge clearfix'>
-      <view class='cancel'>取消</view>
-      <view class='call' bindtap='makephoneCall'>拨打</view>
-    </view>
-  </view>
-</view>
+<Modal callModal="{{callModal}}" bind:modalEvent="makephoneCall" btnTxt="拨打">
+  <image slot="img" class='call-img' src='/resources/images/contact.png'></image>
+  <view slot="context">是否拨打客服热线？</view>
+</Modal>
 <Tabbar></Tabbar>

@@ -1,34 +1,36 @@
 <!--components/device-item/index.wxml-->
 <!-- YF2设备 -->
 <view class='item FM2' wx:if="{{item.type=='YF2'}}">
-  <navigator url="/pages/facility/info?type=YF2&devId={{item.devId}}" class='title clearfix' hover-class='none'>
-    <Icon class="fl icon" iconClass="icon-device"></Icon>{{item.name}}
-    <view class='state'>
-    <block wx:if="{{item.devStatus==0}}">设备未激活</block>
-    <block wx:if="{{item.devStatus==1}}">
-      <Icon class="icons" iconClass="icon-singal"></Icon>{{item.operator}}
-      <Power class="powers" num="{{item.battery}}"></Power> {{item.battery}}%
-    </block>
-    <block wx:if="{{item.devStatus==2}}">设备离线</block>
-  </view>
-    <Icon iconClass="icon-more" class="fr icon"></Icon>
+  <navigator url="/pages/facility/info?type=YF2&devId={{item.devId}}"  hover-class='none'>
+    <view class='title clearfix'>
+      <Icon class="fl icon" iconClass="icon-device"></Icon>{{item.name}}
+      <view class='state'>
+        <block wx:if="{{item.devStatus==0}}">设备未激活</block>
+        <block wx:if="{{item.devStatus==1}}">
+          <Icon class="icons" iconClass="icon-singal"></Icon>{{item.operator}}
+          <Power class="powers" num="{{item.battery}}"></Power> {{item.battery}}%
+        </block>
+        <block wx:if="{{item.devStatus==2}}">设备离线</block>
+      </view>
+      <Icon iconClass="icon-more" class="fr icon"></Icon>
+    </view>
+    <image class='img' src='{{item.image_url}}'></image>
   </navigator>
-  <image class='img' src='{{item.image_url}}'></image>
 </view>
 <!-- YF1设备 -->
-<view class="item FM1  {{item.devStatus==1?'active':''}}" wx:if="{{item.type=='YF1'}}">
-  <navigator url='/pages/facility/facility?status={{item.devStatus}}&&devId={{item.devId}}' class='title clearfix' hover-class='none'>
+<navigator url='/pages/facility/facility?status={{item.devStatus}}&&devId={{item.devId}}'  class="item FM1  {{item.devStatus==1?'active':''}}" wx:if="{{item.type=='YF1'}}" hover-class='none'>
+  <view class='title clearfix' >
     <Icon class="fl icon" iconClass="icon-device"></Icon>{{item.name}}
-     <view class='state'>
-    <block wx:if="{{item.devStatus==0}}">设备未激活</block>
-    <block wx:if="{{item.devStatus==1}}">
-      <Icon class="icons" iconClass="icon-singal"></Icon>{{item.operator}}
-      <Power class="powers" num="{{item.battery}}"></Power> {{item.battery}}%
-    </block>
-    <block wx:if="{{item.devStatus==2}}">设备离线</block>
-  </view>
+    <view class='state'>
+      <block wx:if="{{item.devStatus==0}}">设备未激活</block>
+      <block wx:if="{{item.devStatus==1}}">
+        <Icon class="icons" iconClass="icon-singal"></Icon>{{item.operator}}
+        <Power class="powers" num="{{item.battery}}"></Power> {{item.battery}}%
+      </block>
+      <block wx:if="{{item.devStatus==2}}">设备离线</block>
+    </view>
     <Icon iconClass="icon-more" class="fr icon"></Icon>
-  </navigator>
+  </view>
   <view class='data-wrap clearfix'>
     <image class='fl img' src='/resources/images/bee.png'></image>
     <view class='fl datas'>
@@ -58,4 +60,5 @@
       </view>
     </view>
   </view>
-</view>
+
+</navigator>

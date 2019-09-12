@@ -1,0 +1,5 @@
+@import '/pages/chart/chart.wxss';
+
+.tab text {
+  padding: 4rpx 14rpx;
+}

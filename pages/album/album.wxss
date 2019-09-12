@@ -55,13 +55,36 @@
   left: 20rpx;
   bottom: 15rpx;
 }
+
 .nodata {
   font-size: 24rpx;
   color: #ccc;
   text-align: center;
 }
-.nodata image{
+
+.nodata image {
   width: 191rpx;
   height: 219rpx;
   margin: 200rpx auto 40rpx;
+}
+.nomore{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+  font-size: 24rpx;
+}
+.button {
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 50rpx;
+  width: 500rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  left: 120rpx;
+  background: rgba(0, 186, 219, 1);
+  box-shadow: 0px 14rpx 22rpx 5rpx rgba(0, 136, 160, 0.38);
+  border-radius: 43rpx;
 }

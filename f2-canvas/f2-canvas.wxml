@@ -7,4 +7,5 @@ bindtouchmove="touchMove"
 bindtouchend="touchEnd"
 bindlongtap="press"
 >
+<slot></slot>
 </canvas>

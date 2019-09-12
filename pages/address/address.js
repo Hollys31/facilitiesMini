@@ -20,7 +20,6 @@ Page({
       this.data.type = options.type;
       this.getDeviceAddress()
     }
-   
   },
 
   /**
@@ -36,7 +35,15 @@ Page({
       type: _this.data.type
     }).then(res => {
       _this.setData({
-        device: res.data
+        device: res.data,
+        markers:  [{
+        iconPath: '/resources/images/address.jpg',
+        id: 0,
+        longitude: res.data.longitude,
+        latitude: res.data.latitude,
+        width: 23,
+        height: 27
+      }]
       })
     })
   },

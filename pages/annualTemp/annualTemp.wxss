@@ -1,0 +1,2 @@
+/* pages/annualTemp/annualTemp.wxss */
+@import '/pages/chart/chart.wxss'

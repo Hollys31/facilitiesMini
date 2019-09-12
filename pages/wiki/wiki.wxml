@@ -1,0 +1,14 @@
+<!--pages/wiki/wiki.wxml-->
+<view class="wiki" wx:if="{{!nodate}}">
+  <navigator hover-class="none" url="/pages/wiki/article" class="item">
+    <view class="left">
+      <view class="tit">光照时长对作物的影响</view>
+      <view class="brief">由于一年中地球围绕太阳公转，地球公转的轨道和地球表面的赤道 </view>
+    </view>
+    <image src="/resources/images/banner.png"></image>
+  </navigator>
+</view>
+<view class="nodate" wx:if="{{nodate}}">
+  <image src="/resources/images/nochart.png"></image>
+  暂无数据
+</view>

@@ -50,7 +50,7 @@
   line-height: 55rpx;
   padding: 0 35rpx;
   color: #ccc;
-  font-size: 14rpx;
+  font-size: 22rpx;
   display: inline-block;
 }
  .state .powers{

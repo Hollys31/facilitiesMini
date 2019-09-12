@@ -1,69 +1,52 @@
 <!--pages/chart/chart.wxml-->
 <view class='tab'>
   <scroll-view scroll-x>
-    <text class='active'>湿度</text>
-    <text>温度</text>
-    <text>气压</text>
-    <text>光照</text>
-    <text>风速</text>
-    <text>雨量</text>
+    <text wx:for="{{tabSorts}}" wx:key="{{index}}" data-indx="{{index}}" data-unit="{{item.unit}}" data-eqType="{{item.eqType}}" class="{{currSortInd==index?'active':''}}" bindtap="changeTabSort">{{item.name}}</text>
   </scroll-view>
 </view>
 <view class='latest-data clearfix'>
   <view class='item'>
-    <view class='tit'>最小值</view>
-    <view class='row'>
-      <Icon class="icon" iconClass="icon-air"></Icon>
-      空气
-      <text>12</text>
-    </view>
-    <view class='row'>
-      <Icon class="icon" iconClass="icon-soil"></Icon>
-      土壤
-      <text>12</text>
-    </view>
+    <view class='tit row'>最小值</view>
+    <view class='tit row'>平均值</view>
+    <view class='tit row'>最大值</view>
   </view>
-  <view class='item'>
-    <view  class='tit'>平均值</view>
+  <view class='item' wx:for="{{latestEnvDatas}}" wx:key="{{index}}">
     <view class='row'>
-     <Icon class="icon" iconClass="icon-air"></Icon>
-      空气
-      <text>12</text>
+      <Icon wx:if="{{index==0}}" class="icon" iconClass="icon-air"></Icon>
+      <Icon wx:if="{{index==1}}" class="icon" iconClass="icon-soil"></Icon>
+      <text> {{item.type}} {{item.minData||'-'}} {{currUnit}}</text>
     </view>
     <view class='row'>
-      <Icon class="icon" iconClass="icon-soil"></Icon>
-      土壤
-      <text>12</text>
-    </view>
-  </view>
-  <view class='item'>
-    <view  class='tit'>最大值</view>
-    <view class='row'>
-      <Icon class="icon" iconClass="icon-air"></Icon>
-      空气
-      <text>12</text>
+      <Icon wx:if="{{index==0}}" class="icon" iconClass="icon-air"></Icon>
+      <Icon wx:if="{{index==1}}" class="icon" iconClass="icon-soil"></Icon>
+      <text>{{item.type}} {{item.avgData||'-'}} {{currUnit}}</text>
     </view>
     <view class='row'>
-      <Icon class="icon" iconClass="icon-soil"></Icon>
-      土壤
-      <text>12</text>
+      <Icon wx:if="{{index==0}}" class="icon" iconClass="icon-air"></Icon>
+      <Icon wx:if="{{index==1}}" class="icon" iconClass="icon-soil"></Icon>
+      <text>{{item.type}} {{item.maxData||'-'}} {{currUnit}}</text>
     </view>
   </view>
 </view>
-<view class='chart-wrap'>
- 
+<view class='chart-wrap' wx:if="{{hasChartData}}">
+  <ff-canvas class='chart' canvas-id="chart" id="chart" opts="{{ opts }}">
+    <my-select dateTypes="{{dateTypes}}" bind:getTimeType="getChartData"></my-select>
+  </ff-canvas>
+</view>
+<view wx:if="{{!hasChartData}}" class="empty">
+  <my-select class="myselect" dateTypes="{{dateTypes}}" bind:getTimeType="getChartData"></my-select>
+  <image src="/resources/images/nochart.png"></image>
+  <text>暂无数据</text>
 </view>
 <view class='other clearfix'>
-  <navigator hover-class='none' url='' class='item '>
+  <navigator hover-class='none' url='/pages/sunshine/sunshine' class='item '>
     <text class='fl label'>日照时长</text>
-    <text class='date fl'>2019/08/11</text>
-    222h
+    <text class='date fl'>{{currDay}}</text> {{otherData.totalSunTime}}h
     <Icon class="icon" iconClass="icon-more"></Icon>
-  </navigator> 
-  <navigator hover-class='none' url='' class='item'>
+  </navigator>
+  <navigator hover-class='none' url='/pages/annualTemp/annualTemp' class='item'>
     <text space="ensp" class='fl label'>年 积 温</text>
-    <text class='date fl'>2019/08/11</text>
-    222h
+    <text class='date fl'>{{currDay}}</text> {{otherData.totalYearTemp}}°C
     <Icon class="icon fr" iconClass="icon-more"></Icon>
-  </navigator> 
+  </navigator>
 </view>
