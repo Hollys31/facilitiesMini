@@ -1,7 +1,10 @@
 <!--components/myselect/myselect.wxml-->
 <cover-view class="select  {{showItem?'active':''}}">
-    <cover-view bindtap="toggleSelect" class="selected">{{currname}}<cover-image class="img" src="/resources/images/up.png"></cover-image></cover-view>
-    <cover-view bindtap="getSelectVal" class="item" data-name="{{item.name}}" data-val="{{item.value}}" wx:for="{{dateTypes}}" wx:key="{{index}}">
-      {{item.name}}
-    </cover-view>
+  <cover-view bindtap="toggleSelect" class="selected clearfix">
+    {{currname}}
+    <cover-image class="img" src="/resources/images/up.png"></cover-image>
   </cover-view>
+  <cover-view bindtap="getSelectVal" class="item" data-name="{{item.name}}" data-val="{{item.value}}" wx:for="{{dateTypes}}" wx:key="{{index}}">
+    {{item.name}}
+  </cover-view>
+</cover-view>

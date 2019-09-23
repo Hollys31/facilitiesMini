@@ -44,3 +44,23 @@
   margin-left: -84rpx;
   bottom: 0;
 }
+.err .err-img{
+  width: 132rpx;
+  height: 130rpx;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  margin-left: -66rpx;
+  margin-top: -240rpx;
+}
+.err .context {
+  padding-top: 70rpx;
+  height: 278rpx;
+  line-height: 80rpx;
+}
+.err .context text{
+  display: block;
+  color: #ccc;
+  font-size: 28rpx;
+}

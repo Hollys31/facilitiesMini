@@ -37,7 +37,7 @@ App({
     return new Promise(function (resolve, reject) {
       _this.wxLogin.then(code => {
         API.getOpenId({ code: code }).then(res => {
-         // _this.globalData.openId = res.data.openid;
+       /* _this.globalData.openId = res.data.openid; */
           resolve(res.data.openid);
           return res.data.openid
         })

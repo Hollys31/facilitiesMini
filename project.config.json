@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -131,6 +131,13 @@
 					"id": -1,
 					"name": "全景视频",
 					"pathName": "pages/album/panoramicVideo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "启动",
+					"pathName": "pages/start/start",
 					"query": "",
 					"scene": null
 				}

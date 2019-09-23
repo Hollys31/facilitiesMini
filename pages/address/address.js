@@ -34,15 +34,21 @@ Page({
       devId: app.globalData.devId,
       type: _this.data.type
     }).then(res => {
+      let iconPath=null;
+      if (this.data.type==='YF1'){
+        iconPath='/resources/images/local1.png'
+      }else{
+        iconPath = '/resources/images/local2.png'
+      }
       _this.setData({
         device: res.data,
         markers:  [{
-        iconPath: '/resources/images/address.jpg',
+        iconPath: iconPath,
         id: 0,
         longitude: res.data.longitude,
         latitude: res.data.latitude,
-        width: 23,
-        height: 27
+        width: 49,
+        height: 71
       }]
       })
     })

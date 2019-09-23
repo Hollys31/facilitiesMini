@@ -1,31 +1,31 @@
 const API = require('../utils/api.js')
 const app = getApp();
 const device = {
-  addEquiement() {//添加设备
+  addEquiement(code) {//添加设备
+    wx.showLoading({
+      title: '加载中...',
+    })
     let currentPages = getCurrentPages();
     let nowpage = currentPages[currentPages.length - 1];
-    wx.scanCode({
-      success(res) {
-        API.addEquiement({
-          openId: app.globalData.openId,
-          qrCode: res.result
-        }).then(res => {
-          if (res.status == 200) {
-            wx.switchTab({
-              url: '/pages/index/index',
-              success: function (e) {
-                let pages = getCurrentPages();
-                let currPage = pages[pages.length - 1]; //当前页面
-                currPage.onLoad();
-              }
-            })
-          } else {
-            nowpage.setData({
-              showModal: true
-            })
+    API.addEquiement({
+      openId: app.globalData.openId,
+      qrCode: code
+    }).then(res => {
+      if (res.status == '200' || res.status == '999056') {
+        wx.reLaunch({
+          url: '/pages/index/index',
+          success: function (e) {
+            let pages = getCurrentPages();
+            let currPage = pages[pages.length - 1]; //当前页面
+            currPage.onLoad();
           }
         })
+      } else {
+        nowpage.setData({
+          showModal: true
+        })
       }
+      wx.hideLoading();
     })
   },
   deviceRequest: function (devid, type) {//设备数据信息请求

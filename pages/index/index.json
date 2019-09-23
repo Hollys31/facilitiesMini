@@ -1,4 +1,5 @@
 {
+  "enablePullDownRefresh": true,
   "navigationBarTitleText": "裕丰小蜜蜂",
   "usingComponents": {
     "Icon": "../../components/icon/icon",

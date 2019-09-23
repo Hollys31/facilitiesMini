@@ -26,4 +26,4 @@
   <image slot="img" class='call-img' src='/resources/images/contact.png'></image>
   <view slot="context">是否拨打客服热线？</view>
 </Modal>
-<Tabbar></Tabbar>
+<Tabbar showModal="{{showModal}}"></Tabbar>

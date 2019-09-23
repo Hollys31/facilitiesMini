@@ -28,7 +28,13 @@ page {
   width: 23rpx;
   height: 27rpx;
   margin-right: 10rpx;
-  display: inline-block;
+  margin-top: 4rpx;
+  display: block;
+  float: left
+}
+.map-wrap .address{
+  float: left;
+  width: 600rpx;
 }
 .map-wrap  .name{
   font-size: 30rpx;

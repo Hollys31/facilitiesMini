@@ -21,9 +21,15 @@ Component({
    */
   methods: {
     toggleSelect(){
-      this.setData({
-        showItem: !this.data.showItem
+      if (this.data.showItem){
+        this.setData({
+          showItem: false
       })
+      }else{
+        this.setData({
+          showItem: true
+        })
+      }
     },
     getSelectVal(e){
       const val = e.currentTarget.dataset.val;

@@ -7,7 +7,7 @@ const HTTP=amount=>{
       },
       ...amount,
       success: function (res) {
-        if (res.data.status == 200 || res.data.status==999064) {
+        if (res.data.status == '200' || res.data.status == '999064' || res.data.status == '999056') {
           resolve(res.data);
         }
       },

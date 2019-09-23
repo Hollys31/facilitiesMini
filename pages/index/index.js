@@ -10,24 +10,32 @@ Page({
     page: {},
     currPage: 1,
     ondata: false,
-    showModal:false
+    showModal: false
   },
-
-  onLoad: function () {
+  onLoad: function (options) {
+    const _this = this;
     wx.hideTabBar();
-    wx.showLoading({
-      title: '加载中',
-    })
-    this.data.currPage=1;
-    this.data.name="";
-    this.data.deviceList= [];
-    this.data.page= { };
-    if(app.globalData.openId){
-      this.getHomeList();
+    if (options && options.q) {
+      var scene = decodeURIComponent(options.q);
+      app.getOpenId().then(res => {
+        app.globalData.openId = res;
+        device.addEquiement(scene);
+      })
     }else{
-      this.initgetHomeList();
+      wx.showLoading({
+        title: '加载中',
+      })
+      this.data.currPage = 1;
+      this.data.name = "";
+      this.data.deviceList = [];
+      this.data.page = {};
+      if (app.globalData.openId) {
+        this.getHomeList();
+      } else {
+        this.initgetHomeList();
+      }
     }
-    
+   
   },
 
   /*
@@ -59,6 +67,7 @@ Page({
         deviceList: deviceList,
         page: res.data.page,
       })
+      wx.stopPullDownRefresh()
     })
   },
   initgetHomeList() {
@@ -75,7 +84,6 @@ Page({
   },
   searchBlur(e) {//移出搜索框
     const val = e.detail.value;
-    console.log(e.detail.value);
     this.setData({
       name: val
     })
@@ -88,10 +96,12 @@ Page({
     })
     _this.getHomeList()
   },
-  addEquiement(){//添加设备
-   
-      device.addEquiement();
-
+  addEquiement() {//添加设备
+    wx.scanCode({
+      success(res) {
+        device.addEquiement(res.result);
+      }
+    })
   },
   /**
   * 页面上拉触底事件的处理函数
@@ -100,4 +110,7 @@ Page({
     this.data.currPage = this.data.currPage + 1;
     this.getHomeList();
   },
+  onPullDownRefresh: function () {
+    this.onLoad();
+  }
 })

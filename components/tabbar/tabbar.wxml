@@ -8,4 +8,11 @@
  </view>
  <image bindtap="addEquiement" class='scan' src='/resources/images/add.png'></image>
 </view>
+<Modal class="err" callModal="{{showModal}}" bind:modalEvent="addEquiement" btnTxt="重新扫描">
+  <image slot="img" class='err-img' src='/resources/images/warn.png'></image>
+  <view class="context" slot="context">
+    扫码失败
+    <text>无效二维码</text>
+  </view>
+</Modal>
 

@@ -7,6 +7,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    showModal:{
+      type:Boolean,
+      value:false
+    },
   },
   lifetimes: {
     attached: function () {
@@ -45,6 +49,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    addEquiement() {//添加设备
+      wx.scanCode({
+        success(res) {
+          device.addEquiement(res.result);
+        }
+      })
+    },
     handelTopage(e) {//跳转页面
       const url = e.currentTarget.dataset.url;
       wx.switchTab({
@@ -56,8 +67,8 @@ Component({
       let _this = currentPages[currentPages.length - 1];
       let pagePath = _this.route;
       (pagePath.indexOf('/') != 0) && (pagePath = '/' + pagePath);
-      let tabBar=this.data.tabBar;
-      for (let i in  tabBar.list) {
+      let tabBar = this.data.tabBar;
+      for (let i in tabBar.list) {
         tabBar.list[i].selected = false;
         (tabBar.list[i].pagePath == pagePath) && (tabBar.list[i].selected = true);
       }
@@ -66,7 +77,11 @@ Component({
       })
     },
     addEquiement() {//添加设备
-      device.addEquiement();
+      wx.scanCode({
+        success(res) {
+          device.addEquiement(res.result);
+        }
+      })
     },
   }
 })

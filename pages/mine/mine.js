@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModal: false,
     callModal:false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
